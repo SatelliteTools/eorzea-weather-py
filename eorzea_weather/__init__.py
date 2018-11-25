@@ -27,7 +27,7 @@ class EorzeaWeather:
 
         return int(step2 % 0x64)
 
-    def get_weather(self, target_zone: Zones, et: EorzeaTime):
+    def get_weather(self, target_zone: Zones, et: EorzeaTime=EorzeaTime()):
 
         et.shift_weather_period()
         chance: int = self.get_weather_chance(et)
