@@ -19,6 +19,9 @@ class EorzeaTime:
     def convert_to_lt_stamp(self) -> float:
         return self.et_stamp / self.EORZEA_TIME_CONST
 
+    def convert_to_lt(self) -> dt:
+        return dt.fromtimestamp(self.et_stamp / self.EORZEA_TIME_CONST)
+
     def get_hour(self) -> int:
         return int(self.et_stamp / self.ONE_HOUR % self.EORZEA_SUN)
 
