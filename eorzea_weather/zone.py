@@ -46,3 +46,6 @@ class Zones(Enum):
     EUREKA_ANEMOS = "Eureka Anemos"
     EUREKA_PAGOS = "Eureka Pagos"
     EUREKA_PYROS = "Eureka Pyros"
+
+    def __str__(self):
+        return self._value_
